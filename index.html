@@ -40,4 +40,97 @@ section{padding:8rem 10% 4rem;max-width:1400px;margin:auto}
 .card::before{content:'';position:absolute;top:0;left:0;width:4px;height:0;background:var(--accent);box-shadow:0 0 10px var(--glow);transition:.3s}
 .card:hover{transform:translateY(-5px);border-color:rgba(111,207,120,.35);box-shadow:0 10px 30px rgba(0,0,0,.5)}
 .card:hover::before{height:100%}
-.card svg{width:2.5rem;height:2.5rem;fill:none;stroke:var(--accent);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-bottom:1.5rem;filter:drop
+.card svg{width:2.5rem;height:2.5rem;fill:none;stroke:var(--accent);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-bottom:1.5rem;filter:drop-shadow(0 0 6px var(--glow))}
+.card svg .f{fill:var(--accent);stroke:none}
+.card h3{font:1.5rem var(--font-display);margin-bottom:1rem;text-transform:uppercase}
+.card p{color:var(--text-muted);line-height:1.6}
+.contact-container{max-width:700px;margin:auto;padding:3rem;border-color:rgba(111,207,120,.2);box-shadow:0 0 30px rgba(0,0,0,.3)}
+.form-group{margin-bottom:1.5rem}
+.form-group label{display:block;font:.9rem var(--font-display);text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);margin-bottom:.5rem}
+.form-group input,.form-group textarea{width:100%;background:rgba(1,26,46,.7);border:1px solid rgba(255,255,255,.15);padding:1rem;color:var(--text-main);font:1.2rem var(--font-body);border-radius:14px;transition:.3s}
+.form-group input:focus,.form-group textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 10px var(--glow)}
+.submit{width:100%}
+footer{background:repeating-linear-gradient(90deg,#1f6527 0 64px,var(--primary) 64px 128px);padding:3rem 10%;text-align:center;font:.9rem var(--font-display);color:#fff;letter-spacing:1px;text-shadow:0 1px 2px rgba(0,0,0,.4)}
+@keyframes pulse{50%{box-shadow:0 0 25px var(--glow)}}
+@media(max-width:900px){h1{font-size:3.5rem}.nav-links{display:none}section{padding:6rem 5% 2rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="#home" class="logo">BAM <span>TURF</span></a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header id="home">
+  <svg class="hills" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true"><path fill="#3f9a48" fill-opacity=".45" d="M0 190C240 110 480 130 720 180C960 230 1200 140 1440 110V320H0Z"/><path fill="#2B7A32" d="M0 245C200 185 420 205 640 245C880 285 1120 195 1440 225V320H0Z"/><path fill="#012640" d="M0 290C300 250 560 290 820 280C1080 270 1260 250 1440 280V320H0Z"/></svg>
+  <div class="hero-badge">Artificial Turf Installation</div>
+  <h1>BAM <span class="turf-word">TURF</span> <span class="badge-num">LLC</span></h1>
+  <p class="motto"><span>Green.</span> All year.</p>
+  <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
+</header>
+
+<section id="services">
+  <h2 class="section-title">What We Install</h2>
+  <div class="grid-3">
+    <div class="card">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19C5 9 11 4 20 4c0 9-5 15-15 15zM5 19l8-8"/></svg>
+      <h3>Yards</h3>
+      <p>A full lawn replacement that stays green without water, mowing, or fertilizer.</p>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle class="f" cx="7" cy="10" r="1.8"/><circle class="f" cx="12" cy="7" r="1.8"/><circle class="f" cx="17" cy="10" r="1.8"/><path d="M12 12c-3 0-5 3-5 5 0 1.5 1.5 2 3 1.5 1-.3 1.4-.3 2 0 1.5.5 3 0 3-1.5 0-2-2-5-3-5z"/></svg>
+      <h3>Pet Areas</h3>
+      <p>Turf and base materials chosen to drain well and stay easy to clean.</p>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 14c1 2 7 2 8 0"/><circle class="f" cx="9" cy="10" r=".8"/><circle class="f" cx="15" cy="10" r=".8"/></svg>
+      <h3>Play Areas</h3>
+      <p>Soft, even surfaces for kids, with clean edges and a safe, level base.</p>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 21V4M6 5h12l-3 4 3 4H6"/></svg>
+      <h3>Putting Greens</h3>
+      <p>A backyard green built to roll true, sized to fit your space.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">Get a Free Quote</h2>
+  <div class="contact-container">
+    <form name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="quote">
+      <p style="display:none"><label>Leave this empty: <input name="bot-field"></label></p>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required placeholder="Enter name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="Enter email">
+      </div>
+      <div class="form-group">
+        <label for="message">Tell Us About Your Project</label>
+        <textarea id="message" name="message" rows="5" required placeholder="What area do you want turfed, and roughly how big is it?"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary submit">Request a Quote</button>
+    </form>
+  </div>
+</section>
+
+<footer>© Bam Turf LLC</footer>
+
+<script>
+window.addEventListener('scroll',function(){
+  var cur='';
+  document.querySelectorAll('section,header').forEach(function(s){if(window.pageYOffset>=s.offsetTop-150)cur=s.id});
+  document.querySelectorAll('.nav-links a').forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+cur)});
+});
+</script>
+</body>
+</html>
